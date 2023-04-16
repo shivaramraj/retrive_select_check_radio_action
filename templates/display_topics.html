@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_topics</title>
+
+</head>
+<body>
+    <center>
+        <form action="" method="POST">
+
+            {% csrf_token %}
+            <label for="topic_name">Topic_name</label>
+            <select name="topic_name" id="topic_name"><br>
+                <option value="select">...select....</option>
+                {% for x in topics %}
+                    <option value="{{x}}">{{x.Topic_name}}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit" value="select to display wabpage">
+        </form>
+    </center>
+    
+</body>
+</html>

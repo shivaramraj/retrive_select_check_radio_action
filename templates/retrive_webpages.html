@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>retrive_webpages</title>
+</head>
+<body>
+    <center>retrive_webpages
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>Topic_name</th>
+                    <th>Name</th>
+                    <th>URL</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+
+            {% for x in webpages %}
+                <tr>
+                    <td>{{x.Topic_name}}</td>
+                    <td>{{x.Name}}</td>
+                    <td>{{x.URL}}</td>
+                    <td>{{x.Email}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>

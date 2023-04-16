@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>retrive_web_checkbox</title>
+</head>
+<body>
+    <center>
+        <h1>retrive_web_checkbox</h1>
+        <form action="{% url 'retrive_webpages' %}" method="POST" >
+            {% csrf_token %}
+            <h1><label for="topic_name">Topic_name</label><br></h1>
+            
+                {% for x in topics %}
+                <label for="topic_name">{{x.Topic_name}}</label>
+                <input type="checkbox" name="topic_name" id="topic_name" value="{{x}}"><br>
+                {% endfor %}
+                <input type="submit" value="get_webpages">
+            </select>
+        </form>
+    </center>
+    
+</body>
+</html>
